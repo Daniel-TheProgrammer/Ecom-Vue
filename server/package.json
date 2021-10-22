@@ -1,0 +1,46 @@
+{
+  "name": "hapiserver",
+  "version": "1.0.0",
+  "description": "a hapi server",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier --single-quote --no-semi es5 --write \"./**/*.js\"",
+    "dev": "nodemon ./index.js --exec babel-node",
+    "flow": "flow",
+    "test": "mocha ./**/*.spec.js --require babel-register"
+  },
+  "author": "Dan Abbott <“dan@dabb.io”>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "dotenv": "^5.0.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "flow-bin": "^0.66.0",
+    "good": "^8.1.0",
+    "good-console": "^7.1.0",
+    "good-squeeze": "^5.0.2",
+    "mocha": "^5.0.1",
+    "nodemon": "^1.17.1",
+    "prettier": "1.11.1"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^18.3.1",
+    "@hapi/inert": "^5.2.1",
+    "@sendgrid/mail": "^6.2.1",
+    "bcrypt": "^2.0.0",
+    "console-stamp": "^0.2.6",
+    "hapi-auth-bearer-token": "^6.0.1",
+    "hapi-auth-jwt2": "^8.0.0",
+    "hapi-swagger": "^9.1.1",
+    "joi": "^13.1.2",
+    "jsonwebtoken": "^8.2.0",
+    "mongoose": "^5.6.5",
+    "puppeteer": "^1.18.1",
+    "shortid": "^2.2.8",
+    "vision": "^5.3.1"
+  }
+}

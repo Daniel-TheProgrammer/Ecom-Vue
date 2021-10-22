@@ -1,0 +1,117 @@
+/* Base */
+body {
+  color: green;
+  font-family: "Georgia", serif;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  /* cursor: default; */
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: button; /* for input */
+  -webkit-user-select: none; /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* Make `a` like a button */
+[role="button"] {
+  color: inherit;
+  cursor: default;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  white-space: pre;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+button,
+input[type="submit"],
+input[type="button"] {
+  border: 2px solid $white;
+  padding: 5px 25px;
+  color: $white;
+  cursor: pointer;
+  transition: all .1s ease;
+  border-radius: 150px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.primary {
+    background: $green;
+    font-size: 1.4rem;
+    box-shadow: 5px 5px 0 $green-dark;
+    border: none;
+    padding: 10px 25px;
+
+    &:hover {
+      transform: translateX(2px) translateY(2px);
+      box-shadow: 3px 3px 0 $green-dark;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateX(5px) translateY(5px);
+      box-shadow: none;
+    }
+  }
+
+  &.secondary {
+    background: $green-dark;
+    box-shadow: 8px 8px 0 $green-dark;
+  }
+
+  &.big {
+    margin: 10px;
+    color: $green-dark;
+    background: $white;
+    box-shadow: 6px 6px 0 $green-dark;
+
+    &:hover {
+      transform: translateX(2px) translateY(2px);
+      box-shadow: 4px 4px 0 $green-dark;
+    }
+
+    &:active {
+      transform: translateX(6px) translateY(6px);
+      box-shadow: none;
+    }
+  }
+}
+
+.button-container {
+  position: relative;
+}
